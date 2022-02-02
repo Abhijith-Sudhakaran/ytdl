@@ -1,30 +1,29 @@
 {
-    "name": "ytdl",
-    "description": "A Telegram YouTUbe to audio/viodo downloader, made with pyrogram",
-    "repository": "https://github.com/infinity-plus/YT_downloader_bot",
-    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDxc3gV0FA7YbxbVFh_mZ_4_CGs_vMaAsmRg&usqp=CAU",
-    "keywords": [
-        "python",
-        "pyrogram",
-        "telegram",
-        "youtube"
+  "name": "YouTube Downloader Bot",
+  "description": "A telegram bot To Download Youtube Files ",
+  "logo": "https://telegra.ph/file/9c76a646de49e87d74412.jpg",
+  "keywords": [
+    "Youtube","YoutubeDownloader"
+  ],
+  "repository": "https://github.com/SLdevilX/Youtube-Downloader-Bot",
+  "success_url": "https://t.me/youtubdlbot",
+  "website": "https://lasiya.ml",
+  "env": {
+        "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true}
+  },
+      "buildpacks": [
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+        {"url": "heroku/python"}
     ],
-    "image": "heroku/python",
-    "formation": {
+  "formation": {
         "worker": {
             "quantity": 1,
             "size": "free"
         }
     },
-    "env": {
-        "API_ID": {
-            "description": "App api_id from https://my.telegram.org"
-        },
-        "API_HASH": {
-            "description": "App api_hash from https://my.telegram.org"
-        },
-        "BOT_TOKEN": {
-            "description": "Bot token from https://t.me/BotFather"
-        }
-    }
+      "stack": "heroku-20"
+
+
 }
